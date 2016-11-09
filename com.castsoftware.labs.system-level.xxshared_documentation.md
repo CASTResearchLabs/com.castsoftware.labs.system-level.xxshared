@@ -127,7 +127,7 @@ This extension is currently supported on CAST databases installed on CAST Storag
 
 # Bug Fix List
 
-N\/A
+N/A
 
 # Download and installation instructions
 
@@ -137,10 +137,10 @@ The installation steps are the following:
 
 * download the extension through the CAST Extension Downloader using the https://extend.castsoftware.com:443/labs download server
 * open Server Manager 8.1+
-* select the existing set of databases to update \/ install a new set of databases
-* manage extensions of the existing set of database \/ follow the installation wizard up to the manage extension pane
+* select the existing set of databases to update / install a new set of databases
+* manage extensions of the existing set of database / follow the installation wizard up to the manage extension pane
 * select _com.castsoftware.labs.system-level.xxshared.1.3.0_
-* run the update \/ the installation  
+* run the update / the installation  
 * open CAST Management Studio
 * import the Assessment Model from the Dashboard Service processed in steps \#3 to \#6 above; this is a _Mandatory_ step to start computing the new indicator, one MUST import and use the Assessment Model from the Dashboard that was updated with the extension
 
@@ -156,11 +156,11 @@ To get results:
 
 ## Objects
 
-N\/A
+N/A
 
 ## Links
 
-N\/A
+N/A
 
 ## Quality rules
 
@@ -225,5 +225,35 @@ Therefore, you can expect grade variations for their parents business criteria.
 
 # Limitations
 
-N\/A
+## Functional
+Not all quality rules which could benefit from the transformation are already transformed. In other words, it's not because the current extension does not deliver an XX-Shared version of some regular quality rule that it means there would be no value in doing so.
+
+## Technical
+N/A
+
+# Illustrations
+
+## CED
+
+### Avoid using SQL queries inside an XX-Shared loop vs. Avoid using SQL queries inside a loop - showing XX-shared violations
+![CED Quality Model Drill-down](/CED1.png)
+while the original quality rule shows the following violations:
+![CED Quality Model Drill-down](/CED2.png)
+with only the first one with enough connectedness (> 1000) to be a violation of the XX-Shared version of the quality rulewith only the first one with enough connectedness (> 1000) to be a violation of the XX-Shared version of the quality rule
+
+### Check usage of '==' and '!=' on XX-Shared objects vs. Check usage of '==' and '!=' - showing no XX-shared violation
+![CED Quality Model Drill-down](/CED3.png)
+while the original quality rule shows the following violations:
+![CED Quality Model Drill-down](/CED4.png)
+with no violation with enough connectedness (> 1000) to be a violation of the XX-Shared version of the quality rule
+
+
+## AAD
+
+![AAD home page](/AAD1.png)
+
+
+## AED
+
+![AED Quality Model Drill-down](/AED1.png)
 
