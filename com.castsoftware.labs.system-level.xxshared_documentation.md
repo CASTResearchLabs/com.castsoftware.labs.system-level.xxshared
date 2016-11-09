@@ -135,7 +135,7 @@ Please see:  [Extension Link Installation](http://doc.castsoftware.com/display/D
 
 The installation steps are the following:
 
-* download the extension through the CAST Extension Downloader
+* download the extension through the CAST Extension Downloader using the https://extend.castsoftware.com:443/labs download server
 * open Server Manager 8.1+
 * select the existing set of databases to update \/ install a new set of databases
 * manage extensions of the existing set of database \/ follow the installation wizard up to the manage extension pane
@@ -188,25 +188,25 @@ List of new Quality Rules:
 New quality rules results contributes to the following Technical Criteria:
 
 * Efficiency - expensive calls in loops
-  Avoid using SQL queries inside an XX-Shared loop
-  Avoid method invocation in an XX-Shared loop termination expression
-  Avoid instantiations inside XX-Shared loops
-  Avoid direct or indirect remote calls inside an XX-Shared loop
-  Avoid the use of InstanceOf inside XX-shared loops
-  Avoid indirect String concatenation inside XX-shared loops
-  Avoid String concatenation in XX-shared loops
-  Avoid Cursors inside an XX-Shared loop
+  * Avoid using SQL queries inside an XX-Shared loop
+  * Avoid method invocation in an XX-Shared loop termination expression
+  * Avoid instantiations inside XX-Shared loops
+  * Avoid direct or indirect remote calls inside an XX-Shared loop
+  * Avoid the use of InstanceOf inside XX-shared loops
+  * Avoid indirect String concatenation inside XX-shared loops
+  * Avoid String concatenation in XX-shared loops
+  * Avoid Cursors inside an XX-Shared loop
 * Efficiency - SQL and data handling performance
-  Avoid UPDATE trigger firing when not necessary in XX-Shared object
-  Avoid XX-Shared SQL queries on XXL Tables with implicit conversions in the WHERE clause,
-  Avoid XX-Shared SQL queries on XXL tables not using the first column of a composite index in the WHERE clause,
-  Avoid XX-Shared SQL queries on XXL Tables using Functions on indexed Columns in the WHERE clause,
-  Avoid XX-Shared SQL queries on XXL Tables that no index can support, 
-  Avoid XX-Shared SQL queries with a cartesian product on XXL Tables,
+  * Avoid UPDATE trigger firing when not necessary in XX-Shared object
+  * Avoid XX-Shared SQL queries on XXL Tables with implicit conversions in the WHERE clause,
+  * Avoid XX-Shared SQL queries on XXL tables not using the first column of a composite index in the WHERE clause,
+  * Avoid XX-Shared SQL queries on XXL Tables using Functions on indexed Columns in the WHERE clause,
+  * Avoid XX-Shared SQL queries on XXL Tables that no index can support, 
+  * Avoid XX-Shared SQL queries with a cartesian product on XXL Tables,
 * Efficiency - Memory, network, and disk space management
-  Close the outermost stream ASAP in XX-Shared object
+  * Close the outermost stream ASAP in XX-Shared object
 * Programming practices - unexpected behaviors
-  Check usage of '==' and '!=' on XX-Shared objects
+  * Check usage of '==' and '!=' on XX-Shared objects
 
 Furthermore, starting with version 1.2.0, the critical contribution flags of original quality rules have been unset and their weight reduced when needed.
 
